@@ -1,0 +1,57 @@
+.tax-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.tax-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.tax-card-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tax-card-liability {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--color-text-primary);
+}
+
+.tax-card-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+  border-radius: calc(var(--radius) / 2);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.tax-card-details {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tax-card-link {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tax-card-link:hover {
+  text-decoration: underline;
+}

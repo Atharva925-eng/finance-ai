@@ -1,0 +1,58 @@
+.expenses-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.expenses-page-heading {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1.75rem;
+}
+
+.expenses-page-subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.expenses-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.expenses-add-button {
+  border: none;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.9rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.expenses-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.expense-filter-chip {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.expense-filter-chip.active {
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+  border-color: transparent;
+}

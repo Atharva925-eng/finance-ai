@@ -1,0 +1,22 @@
+.spending-chart-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.spending-chart-header {
+  margin-bottom: 1rem;
+}
+
+.spending-chart-header h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.spending-chart-wrapper {
+  width: 100%;
+  min-height: 240px;
+}

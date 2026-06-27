@@ -1,0 +1,30 @@
+.placeholder-page {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.placeholder-card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-card h1 {
+  margin: 0 0 1rem;
+  color: var(--color-text-primary);
+  font-size: 2rem;
+}
+
+.placeholder-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
