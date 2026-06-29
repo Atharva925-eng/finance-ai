@@ -1,0 +1,23 @@
+.shared-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.shared-badge-purple {
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+}
+
+.shared-badge-teal {
+  background: var(--color-chip-teal-bg);
+  color: var(--color-chip-teal-text);
+}
+
+.shared-badge-coral {
+  background: var(--color-chip-coral-bg);
+  color: var(--color-chip-coral-text);
+}

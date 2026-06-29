@@ -45,3 +45,12 @@ body {
   font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
   transition: background 0.2s ease, color 0.2s ease;
 }
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}

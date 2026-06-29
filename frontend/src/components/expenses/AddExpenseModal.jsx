@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Modal from "../shared/Modal.jsx";
 import "./AddExpenseModal.css";
 
 const categories = [
@@ -38,16 +39,8 @@ function AddExpenseModal({ onAdd, onClose }) {
   };
 
   return (
-    <div className="add-expense-overlay">
-      <div className="add-expense-modal">
-        <div className="add-expense-header">
-          <h2>Add expense</h2>
-          <button className="add-expense-close" type="button" onClick={onClose}>
-            ×
-          </button>
-        </div>
-
-        <form className="add-expense-form" onSubmit={handleSubmit}>
+    <Modal title="Add expense" onClose={onClose}>
+      <form className="add-expense-form" onSubmit={handleSubmit}>
           <label>
             Date
             <input
@@ -97,8 +90,7 @@ function AddExpenseModal({ onAdd, onClose }) {
             </button>
           </div>
         </form>
-      </div>
-    </div>
+    </Modal>
   );
 }
 

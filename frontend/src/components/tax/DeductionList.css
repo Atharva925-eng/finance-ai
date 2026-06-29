@@ -1,0 +1,70 @@
+.deduction-list-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.deduction-list-header {
+  margin-bottom: 1rem;
+}
+
+.deduction-list-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.deduction-list-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-text-primary);
+}
+
+.deduction-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.deduction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+}
+
+.deduction-item-name {
+  display: block;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.deduction-item-section {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.deduction-item-savings {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .deduction-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .deduction-item-savings {
+    margin-top: 0.75rem;
+  }
+}

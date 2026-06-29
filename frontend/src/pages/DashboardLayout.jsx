@@ -1,5 +1,4 @@
-import Sidebar from "../components/layout/Sidebar.jsx";
-import Topbar from "../components/layout/Topbar.jsx";
+import AppShell from "../components/layout/AppShell.jsx";
 import NewsBanner from "../components/news/NewsBanner.jsx";
 import ExpenseOverviewCard from "../components/dashboard/ExpenseOverviewCard.jsx";
 import BudgetStatusCard from "../components/dashboard/BudgetStatusCard.jsx";
@@ -8,20 +7,15 @@ import "./DashboardLayout.css";
 
 function DashboardLayout() {
   return (
-    <div className="dashboard">
-      <Sidebar />
-
-      <div className="dashboard-main">
-        <Topbar />
-        <NewsBanner />
+    <AppShell>
+      <NewsBanner />
 
         <div className="dashboard-grid">
           <ExpenseOverviewCard />
           <BudgetStatusCard />
           <TaxSnapshotCard />
         </div>
-      </div>
-    </div>
+      </AppShell>
   );
 }
 

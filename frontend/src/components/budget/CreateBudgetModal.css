@@ -1,0 +1,89 @@
+.create-budget-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 35, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 50;
+}
+
+.create-budget-modal {
+  width: min(520px, 100%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+}
+
+.create-budget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.create-budget-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.create-budget-close {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.create-budget-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.create-budget-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.create-budget-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.create-budget-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.create-budget-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-budget-button.cancel {
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.create-budget-button.primary {
+  background: var(--color-primary);
+  color: #fff;
+}

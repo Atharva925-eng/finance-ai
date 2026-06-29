@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { useAppState } from "../../context/AppStateContext.jsx";
 
 function ThemeToggle() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+  const { theme, toggleTheme } = useAppState();
 
   return (
     <button

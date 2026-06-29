@@ -1,8 +1,11 @@
-import { Search, Mail, Bell } from "lucide-react";
+import { Search, Mail, Bell, Menu } from "lucide-react";
 import ThemeToggle from "./ThemeToggle.jsx";
+import { useAppState } from "../../context/AppStateContext.jsx";
 import "./Topbar.css";
 
-function Topbar({ userName = "Aarav Shah" }) {
+function Topbar({ onHamburgerClick }) {
+  const { user } = useAppState();
+  const userName = user.name;
   const initials = userName
     .split(" ")
     .map((part) => part[0])
@@ -11,6 +14,15 @@ function Topbar({ userName = "Aarav Shah" }) {
 
   return (
     <header className="topbar">
+      <button
+        type="button"
+        className="topbar-hamburger"
+        aria-label="Open navigation"
+        onClick={onHamburgerClick}
+      >
+        <Menu size={20} />
+      </button>
+
       <div className="topbar-search">
         <Search size={16} />
         <input type="text" placeholder="Search transactions, reports, news..." />

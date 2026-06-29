@@ -1,0 +1,89 @@
+.budget-progress-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.budget-progress-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.budget-progress-card-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.budget-progress-card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.budget-progress-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.budget-progress-row {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.budget-progress-row-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.budget-progress-category {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.budget-progress-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-chip-coral-bg);
+  color: var(--color-chip-coral-text);
+  border-radius: calc(var(--radius) / 2);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.budget-progress-bar {
+  height: 0.75rem;
+  background: var(--color-skeleton);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+.budget-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.budget-progress-values {
+  display: inline-block;
+}
+
+.budget-progress-percent {
+  font-weight: 600;
+}

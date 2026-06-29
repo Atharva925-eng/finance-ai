@@ -1,0 +1,88 @@
+const mockNewsFeed = [
+  {
+    id: "n1",
+    title: "Tech exports surge after government incentives",
+    source: "Economic Times",
+    sentiment: "Bullish",
+    publishedAt: "2026-06-28T11:15:00Z",
+  },
+  {
+    id: "n2",
+    title: "RBI policy review keeps lending rates stable",
+    source: "Business Standard",
+    sentiment: "Neutral",
+    publishedAt: "2026-06-28T09:45:00Z",
+  },
+  {
+    id: "n3",
+    title: "Gold demand rises as inflation concerns persist",
+    source: "Reuters",
+    sentiment: "Bearish",
+    publishedAt: "2026-06-28T08:30:00Z",
+  },
+  {
+    id: "n4",
+    title: "Startup funding rebounds with strong quarterly results",
+    source: "Mint",
+    sentiment: "Bullish",
+    publishedAt: "2026-06-28T07:20:00Z",
+  },
+  {
+    id: "n5",
+    title: "Retail sales data points to steady consumer demand",
+    source: "LiveMint",
+    sentiment: "Neutral",
+    publishedAt: "2026-06-28T05:55:00Z",
+  },
+  {
+    id: "n6",
+    title: "Fuel price cut eases transport cost pressure",
+    source: "Moneycontrol",
+    sentiment: "Bullish",
+    publishedAt: "2026-06-28T04:10:00Z",
+  },
+  {
+    id: "n7",
+    title: "Monsoon forecast points to weaker crop output",
+    source: "The Hindu",
+    sentiment: "Bearish",
+    publishedAt: "2026-06-27T22:40:00Z",
+  },
+  {
+    id: "n8",
+    title: "Corporate earnings beat expectations for the quarter",
+    source: "Economic Times",
+    sentiment: "Bullish",
+    publishedAt: "2026-06-27T19:30:00Z",
+  },
+  {
+    id: "n9",
+    title: "Consumer confidence holds as inflation cools",
+    source: "Business Today",
+    sentiment: "Neutral",
+    publishedAt: "2026-06-27T16:05:00Z",
+  },
+  {
+    id: "n10",
+    title: "Shipping costs fall after improved freight capacity",
+    source: "Reuters",
+    sentiment: "Bullish",
+    publishedAt: "2026-06-27T12:00:00Z",
+  },
+  {
+    id: "n11",
+    title: "Healthcare spending rises ahead of earnings season",
+    source: "NDTV Profit",
+    sentiment: "Neutral",
+    publishedAt: "2026-06-27T08:20:00Z",
+  },
+  {
+    id: "n12",
+    title: "Agriculture stocks slip on weak export orders",
+    source: "Livemint",
+    sentiment: "Bearish",
+    publishedAt: "2026-06-26T21:45:00Z",
+  },
+];
+
+export default mockNewsFeed;

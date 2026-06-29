@@ -1,0 +1,33 @@
+.market-news-main {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.market-news-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.news-feed-list {
+  display: grid;
+  gap: 1rem;
+  max-height: calc(100vh - 20rem);
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.news-feed-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-feed-list::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .market-news-main {
+    padding: 1rem;
+  }
+}

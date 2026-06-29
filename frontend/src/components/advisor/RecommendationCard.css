@@ -1,0 +1,52 @@
+.recommendation-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.recommendation-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.recommendation-type {
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-purple {
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+}
+
+.badge-teal {
+  background: var(--color-chip-teal-bg);
+  color: var(--color-chip-teal-text);
+}
+
+.recommendation-title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+}
+
+.recommendation-detail {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.recommendation-impact {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}

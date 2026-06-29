@@ -1,28 +1,24 @@
-import Sidebar from "../components/layout/Sidebar.jsx";
-import Topbar from "../components/layout/Topbar.jsx";
+import AppShell from "../components/layout/AppShell.jsx";
+import ChatWindow from "../components/chatbot/ChatWindow.jsx";
 import "./DashboardLayout.css";
+import "../components/expenses/ExpensePageHeader.css";
 
 function ChatbotPage() {
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <div className="dashboard-main">
-        <Topbar />
-        <div
-          style={{
-            minHeight: "calc(100vh - 4rem)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2rem",
-          }}
-        >
-          <h1 style={{ color: "var(--color-text-secondary)", margin: 0 }}>
-            Chatbot — coming soon
-          </h1>
+    <AppShell>
+      <div className="expenses-page-header">
+          <div>
+            <h1 className="expenses-page-heading">Chatbot</h1>
+            <p className="expenses-page-subtitle">
+              Ask finance questions and get quick guidance.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <div style={{ margin: "0 1.5rem 1.5rem" }}>
+          <ChatWindow />
+        </div>
+      </AppShell>
   );
 }
 

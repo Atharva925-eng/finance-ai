@@ -1,9 +1,9 @@
-import { useMemo, useState } from "react";
-import Sidebar from "../components/layout/Sidebar.jsx";
-import Topbar from "../components/layout/Topbar.jsx";
+import { useEffect, useMemo, useState } from "react";
+import AppShell from "../components/layout/AppShell.jsx";
 import ExpenseTable from "../components/expenses/ExpenseTable.jsx";
 import AddExpenseModal from "../components/expenses/AddExpenseModal.jsx";
 import MonthlySpendingChart from "../components/expenses/MonthlySpendingChart.jsx";
+import Skeleton from "../components/shared/Skeleton.jsx";
 import mockExpenseList from "../data/mockExpenseList.js";
 import "./DashboardLayout.css";
 import "../components/expenses/ExpensePageHeader.css";
@@ -24,6 +24,12 @@ function ExpensesPage() {
   const [expenses, setExpenses] = useState(mockExpenseList);
   const [activeCategory, setActiveCategory] = useState("All");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const filteredExpenses = useMemo(() => {
     if (activeCategory === "All") return expenses;
@@ -35,12 +41,8 @@ function ExpensesPage() {
   };
 
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <div className="dashboard-main">
-        <Topbar />
-
-        <div className="expenses-page-header">
+    <AppShell>
+      <div className="expenses-page-header">
           <div>
             <h1 className="expenses-page-heading">Expenses</h1>
             <p className="expenses-page-subtitle">
@@ -74,8 +76,17 @@ function ExpensesPage() {
           </div>
         </div>
 
-        <MonthlySpendingChart expenses={filteredExpenses} />
-        <ExpenseTable items={filteredExpenses} />
+        {isLoading ? (
+          <div className="dashboard-grid">
+            <Skeleton />
+            <Skeleton />
+          </div>
+        ) : (
+          <>
+            <MonthlySpendingChart expenses={filteredExpenses} />
+            <ExpenseTable items={filteredExpenses} />
+          </>
+        )}
 
         {isModalOpen && (
           <AddExpenseModal
@@ -83,8 +94,7 @@ function ExpensesPage() {
             onAdd={handleAddExpense}
           />
         )}
-      </div>
-    </div>
+      </AppShell>
   );
 }
 

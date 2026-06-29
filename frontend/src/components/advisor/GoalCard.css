@@ -1,0 +1,46 @@
+.goal-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.goal-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.goal-card-top h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+}
+
+.goal-deadline {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.goal-progress-bar {
+  height: 0.9rem;
+  background: var(--color-skeleton);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.goal-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+.goal-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}

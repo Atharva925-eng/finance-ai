@@ -1,0 +1,24 @@
+.sentiment-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.sentiment-filter-chip {
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sentiment-filter-chip.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.sentiment-filter-chip:hover {
+  opacity: 0.92;
+}

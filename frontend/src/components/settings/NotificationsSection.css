@@ -1,0 +1,32 @@
+.notifications-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.notification-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.notification-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.notification-row input {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--color-primary);
+}

@@ -1,28 +1,27 @@
-import Sidebar from "../components/layout/Sidebar.jsx";
-import Topbar from "../components/layout/Topbar.jsx";
+import AppShell from "../components/layout/AppShell.jsx";
+import TaxCalculatorForm from "../components/tax/TaxCalculatorForm.jsx";
+import DeductionList from "../components/tax/DeductionList.jsx";
+import TaxReportPreview from "../components/tax/TaxReportPreview.jsx";
+import mockDeductions from "../data/mockDeductions.js";
 import "./DashboardLayout.css";
+import "../components/expenses/ExpensePageHeader.css";
 
 function TaxAssistantPage() {
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <div className="dashboard-main">
-        <Topbar />
-        <div
-          style={{
-            minHeight: "calc(100vh - 4rem)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2rem",
-          }}
-        >
-          <h1 style={{ color: "var(--color-text-secondary)", margin: 0 }}>
-            Tax assistant — coming soon
-          </h1>
+    <AppShell>
+      <div className="expenses-page-header">
+          <div>
+            <h1 className="expenses-page-heading">Tax assistant</h1>
+            <p className="expenses-page-subtitle">
+              Estimate taxes and review deductible savings.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <TaxCalculatorForm />
+        <DeductionList deductions={mockDeductions} />
+        <TaxReportPreview />
+      </AppShell>
   );
 }
 

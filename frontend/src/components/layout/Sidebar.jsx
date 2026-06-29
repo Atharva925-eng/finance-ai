@@ -9,6 +9,7 @@ import {
   MessageCircle,
   Settings,
   LogOut,
+  X,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
@@ -23,40 +24,57 @@ const navItems = [
   { label: "Chatbot", icon: MessageCircle, path: "/chatbot" },
 ];
 
-function Sidebar() {
+function Sidebar({ isMobileOpen, onClose }) {
   return (
-    <aside className="sidebar">
-      <div className="sidebar-logo">
-        <Sparkles size={20} className="sidebar-logo-icon" />
-        <span>Finance OS</span>
-      </div>
+    <>
+      <div
+        className={`sidebar-backdrop${isMobileOpen ? " active" : ""}`}
+        onClick={onClose}
+      />
 
-      <nav className="sidebar-nav">
-        {navItems.map(({ label, icon: Icon, path }) => (
-          <NavLink
-            key={label}
-            to={path}
-            className={({ isActive }) =>
-              `sidebar-item${isActive ? " active" : ""}`
-            }
+      <aside className={`sidebar${isMobileOpen ? " mobile-open" : ""}`}>
+        <div className="sidebar-drawer-header">
+          <div className="sidebar-logo">
+            <Sparkles size={20} className="sidebar-logo-icon" />
+            <span>Finance OS</span>
+          </div>
+          <button
+            type="button"
+            className="sidebar-close-btn"
+            aria-label="Close navigation"
+            onClick={onClose}
           >
-            <Icon size={18} />
-            <span>{label}</span>
-          </NavLink>
-        ))}
-      </nav>
+            <X size={18} />
+          </button>
+        </div>
 
-      <div className="sidebar-bottom">
-        <NavLink to="/settings" className="sidebar-item">
-          <Settings size={18} />
-          <span>Settings</span>
-        </NavLink>
-        <a href="#" className="sidebar-item">
-          <LogOut size={18} />
-          <span>Logout</span>
-        </a>
-      </div>
-    </aside>
+        <nav className="sidebar-nav">
+          {navItems.map(({ label, icon: Icon, path }) => (
+            <NavLink
+              key={label}
+              to={path}
+              className={({ isActive }) =>
+                `sidebar-item${isActive ? " active" : ""}`
+              }
+            >
+              <Icon size={18} />
+              <span>{label}</span>
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="sidebar-bottom">
+          <NavLink to="/settings" className="sidebar-item">
+            <Settings size={18} />
+            <span>Settings</span>
+          </NavLink>
+          <a href="#" className="sidebar-item">
+            <LogOut size={18} />
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+    </>
   );
 }
 

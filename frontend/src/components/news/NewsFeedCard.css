@@ -1,0 +1,57 @@
+.news-feed-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.news-feed-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.news-feed-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.news-feed-time {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.news-feed-title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.news-feed-source {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.badge-teal {
+  background: var(--color-chip-teal-bg);
+  color: var(--color-chip-teal-text);
+}
+
+.badge-coral {
+  background: var(--color-chip-coral-bg);
+  color: var(--color-chip-coral-text);
+}
+
+.badge-purple {
+  background: var(--color-chip-purple-bg);
+  color: var(--color-chip-purple-text);
+}
